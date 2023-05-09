@@ -4,6 +4,27 @@ body {
   background-color: #61122f;
   font-family: 'Oxygen', sans-serif;
 }
+/** Animation**/
+@keyframes float {
+  0% {
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+    transform: translatey(0px);
+  }
+  50% {
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    transform: translatey(-20px);
+  }
+  100% {
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+    transform: translatey(0px);
+  }
+}
+
+@keyframes ChangeColor {
+  0%   {color: #557c3e;}
+  50%  {color: white;}
+  100% {color: #557c3e;}
+}
 
 /** HEADER **/
 #header-nav {
@@ -17,8 +38,6 @@ body {
   width: 150px;
   height: 150px;
   margin: 10px 15px 10px 0;
-  transform: rotate(180deg); 
-  transition-duration: 5s;
 }
 
 .navbar-brand {
@@ -36,6 +55,8 @@ body {
   margin-top: 0;
   margin-bottom: 0;
   line-height: .75;
+  transform: translatey(0px);
+  animation: float 6s ease-in-out infinite;
 }
 
 .navbar-brand a:hover,
@@ -87,6 +108,7 @@ body {
   padding-right: 15px;
   padding-top: 20px;
   font-size: medium;
+  animation: ChangeColor 3s ease-in-out infinite;
 }
 
 .navbar-header button.navbar-toggle,
